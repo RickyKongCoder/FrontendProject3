@@ -9,6 +9,7 @@
   <link rel="icon" href="devchallenges.png" />
 
   <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +20,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@200&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --margin-right-corner-top: 20px;
@@ -59,26 +62,40 @@
 
     .right_bar {
       float: right;
-      margin: 8px;
     }
 
     .right_bar a {
-      width: 57px;
       padding: 0px 0px 5px 0px;
+      display: inline-block;
       margin: 0px 43px;
+
+    }
+
+    .nav-label {
       font-family: 'Montserrat', sans-serif;
       text-decoration: none;
-      color: #FFFFFF
+      color: #FFFFFF;
+      font-size: 18px;
+      transition: 0.3s linear;
+
+    }
+    .cover-nav{
+      display: block;
+      width: fit-content;
+      padding: 0px 0px 5px 0px;
+      margin: 5% auto;
     }
 
     #right_most {
       margin-right: 0px;
     }
 
-    .right_bar a:hover {
+    .nav-label:hover {
       border-bottom-width: 1px;
       border-color: #FFFFFF;
       border-bottom-style: solid;
+      font-size: 19px;
+
     }
 
     .central_section {
@@ -96,9 +113,9 @@
       font-family: 'Lora', serif;
       font-style: normal;
       font-weight: 500;
-      font-size: 50px;
+      font-size: 49px;
       line-height: 61px;
-      margin: 130px 0% 10% 0%;
+      margin: 98px 0% 10% 0%;
     }
 
     .central_left div {
@@ -113,31 +130,65 @@
     }
 
     .central_left a {
-
-
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
       font-size: 18px;
       line-height: 22px;
       color: #FFFFFF;
+      display: block;
+      margin-bottom: 30px;
+
     }
 
     .central_right {
       flex-grow: 1;
 
     }
-  .right-container{
-        display: flex;
-        flex-direction: column;
-        float:right;
-        height: 1000px;
-        white-space: nowrap;
-  }
+
+    .right-container {
+      display: flex;
+      flex-direction: column;
+      float: right;
+      height: 1000px;
+      white-space: nowrap;
+    }
+
     .right-container>img {
       width: 821.11px;
-      margin: auto;
       float: right;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 3px;
+      background-color: #FFF;
+      margin: 6px 0;
+      display: none;
+      ;
+      transition: 0.4s;
+      /*transition  time*/
+    }
+
+    .change .bar1 {
+      --webkit-transform: rotate(-45deg) translate(-6px, 6px);
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      --webkit-transform: rotate(-45deg) translate(-7px, -7px);
+      transform: rotate(45deg) translate(-7px, -7px);
+    }
+
+    .change {
+      display: absolute;
+
     }
 
     .avatar {
@@ -182,6 +233,12 @@
       color: #828282;
     }
 
+    .menu-icon {
+      z-index: 999;
+      position:relative;
+      display: inline-block;
+    }
+
     .designer-detail {
       margin-top: 2%;
       margin-left: 4%;
@@ -203,6 +260,7 @@
 
     .right-corner-note {
       position: relative;
+      z-index: 0;
       white-space: nowrap;
       width: 410px;
       height: 189px;
@@ -212,17 +270,157 @@
       background: #181719;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+    .nav-cover {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height:500%;
+        top:0px;
+        left: 0px;
+        padding-top: 10%;
+        background-color: #181719;
+
+      }
+    @media only screen and (min-width:2500px) {
+        .central_left .title{
+        font-size:70px;
+       }
+       .central_left div {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      .central_left a{
+        font-size: 25px;
+      }
+      .right-container>img {
+    width: 900.11px;
+    float: right;
+    }
+    }
+    @media only screen and (max-width:1875px) {
+      .central_section {
+        display: flex;
+      }
+
+      .right-container>img {
+        width: 600px;
+        float: right;
+      }
+
+      .central_left .title {
+        font-size: 37px;
+        margin: 48px 0% 10% 0%;
+      }
+
+      .central_left div {
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (max-width:1417px) {
+      .central_section {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right-container>img {
+        width: 100%;
+        float: right;
+      }
+
+      .central_left .title {
+        font-size: 45px;
+        margin: 0px 0% 5% 0%;
+      }
+
+      .central_left div {
+        font-size: 18px;
+        margin-bottom: 6%;
+      }
+
+      .right-container {
+        float: none;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        display: block;
+      }
+
+      .right_bar a {
+        display: none;
+      }
+
+      .right-corner-note {
+        width: 310px;
+      }
+      .nav-cover{
+        display: block;
+      }
+    }
+    @media only screen and (max-width:800px) {
+      .topnav{
+        margin: 20px 3%;
+      }
+      .central_section{
+       margin: 139px 3%;
+      }
+      .central_section{
+        margin-top: 10%;
+      }
+      .right-corner-note{
+        left: 50%;
+        transform:translate(-50%,0%);
+        top:-4%;
+      }
+      .design-notify{
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+     
+    
   </style>
 </head>
+<script>
+  var shownCover = false;
+  function insertLayout() {
+    if (!shownCover) {
+      $('<div class="nav-cover"> <a class="nav-label cover-nav" > Hello</a> <a class="  nav-label cover-nav"> Collection</a> <a class="nav-label cover-nav">About</a> <a class="nav-label cover-nav" >Contact</a> </div>').insertAfter('.topnav');
+    } else {
+      let elements = document.getElementsByClassName('nav-cover');
+      while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+      }
+    }
+    shownCover = (!shownCover);
+    console.log(shownCover);
+  }
+  function clickAnimation(x) {
+    x.classList.toggle("change");
+    setTimeout(insertLayout, 300);
+
+
+  }
+
+</script>
 
 <body>
   <div class="topnav">
     <a id="rect_button">THIS INTERIOR</a>
     <div class="right_bar">
-      <a>Hello</a>
-      <a> Collection</a>
-      <a>About</a>
-      <a id="right_most">Contact</a>
+      <a class="nav-label">Hello</a>
+      <a class="nav-label"> Collection</a>
+      <a class="nav-label">About</a>
+      <a class="nav-label" id="right_most">Contact</a>
+      <div class="menu-icon" onclick="clickAnimation(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
     </div>
   </div>
   <div class="central_section">
@@ -237,23 +435,24 @@
 
     <div class="central_right">
       <div class="right-container">
-      <img src="photo1.png"></img>
-      <div class="right-corner-note">
-        <div class="design-info">
-          <img class="avatar" src="photo2.png">
-          </img>
-          <div class="designer-detail">
-            <div class="designer-name">Aliza Webber</div>
-            <div class="designer-title">interior designer</div>
-          </div>
+        <img src="photo1.png"></img>
+        <div class="right-corner-note">
+          <div class="design-info">
+            <img class="avatar" src="photo2.png">
+            </img>
+            <div class="designer-detail">
+              <div class="designer-name">Aliza Webber</div>
+              <div class="designer-title">interior designer</div>
+            </div>
 
-        </div>
-        <div class="design-notify">
-          Designed in 2020 by<br> Aliza Webber
+          </div>
+          <div class="design-notify">
+            Designed in 2020 by<br> Aliza Webber
+          </div>
         </div>
       </div>
-      </div></div>
     </div>
+  </div>
   </div>
 </body>
 
