@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Interior-consultant-challenge}</h1>
+<h1 align="center">Interior-consultant-challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -25,7 +25,6 @@
 - [Overview](#overview)
   - [Built With](#built-with)
 - [Features](#features)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
@@ -44,13 +43,8 @@ HTML, JAVASCRIPT, CSS
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb) was to build an application to complete the given user stories.
 <br>
-Responsive Design
-## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+.
+->Responsive Design
 
 ## Contact
 
