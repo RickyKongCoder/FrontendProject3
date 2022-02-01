@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+  <link rel="icon" href="devchallenges.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --margin-right-corner-top: 20px;
+
+    }
+
+    body {
+      background-color: #181719;
+      margin: 0;
+    }
+
+    .topnav {
+      position: relative;
+      overflow: hidden;
+      margin: 35px 17%;
+    }
+
+    #rect_button {
+      font-family: 'Crimson Pro', serif;
+      font-style: normal;
+      float: left;
+      /*align to left prevent hidden by overflow*/
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 16px;
+      position: relative;
+      width: 86px;
+      height: 16px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      border: #FFFFFF;
+      border-style: solid;
+      border-width: 1px;
+      padding: 8px
+    }
+
+    .right_bar {
+      float: right;
+      margin: 8px;
+    }
+
+    .right_bar a {
+      width: 57px;
+      padding: 0px 0px 5px 0px;
+      margin: 0px 43px;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      color: #FFFFFF
+    }
+
+    #right_most {
+      margin-right: 0px;
+    }
+
+    .right_bar a:hover {
+      border-bottom-width: 1px;
+      border-color: #FFFFFF;
+      border-bottom-style: solid;
+    }
+
+    .central_section {
+      display: flex;
+      flex-direction: row;
+      margin: 139px 17%;
+    }
+
+    .central_left {
+      flex-grow: 1;
+    }
+
+    .central_left .title {
+      color: #FFFFFF;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 61px;
+      margin: 130px 0% 10% 0%;
+    }
+
+    .central_left div {
+      color: #FFFFFF;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+      margin-bottom: 10%;
+    }
+
+    .central_left a {
+
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+    }
+
+    .central_right {
+      flex-grow: 1;
+
+    }
+  .right-container{
+        display: flex;
+        flex-direction: column;
+        float:right;
+        height: 1000px;
+        white-space: nowrap;
+  }
+    .right-container>img {
+      width: 821.11px;
+      margin: auto;
+      float: right;
+    }
+
+    .avatar {
+      /* vertical-align: middle; */
+      width: 50px;
+      height: 50px;
+      /* margin:   var(--margin-right-corner-top) 8%; */
+      border-radius: 50%;
+    }
+
+    .design-info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-top: 5%;
+      margin-left: 5%;
+
+    }
+
+    .designer-name {
+      width: 95px;
+      height: 17px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+    }
+
+    .designer-title {
+
+      width: 102px;
+      height: 15px;
+      left: 1021px;
+      top: 770px;
+      font-weight: 600;
+      font-family: Montserrat;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 15px;
+      color: #828282;
+    }
+
+    .designer-detail {
+      margin-top: 2%;
+      margin-left: 4%;
+    }
+
+    .design-notify {
+      width: 287px;
+      height: 62px;
+
+      font-family: Lora;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 31px;
+      margin: 5%;
+
+      color: #FFFFFF;
+    }
+
+    .right-corner-note {
+      position: relative;
+      white-space: nowrap;
+      width: 410px;
+      height: 189px;
+      left: 47%;
+      top: -15%;
+      overflow: hidden;
+      background: #181719;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <a id="rect_button">THIS INTERIOR</a>
+    <div class="right_bar">
+      <a>Hello</a>
+      <a> Collection</a>
+      <a>About</a>
+      <a id="right_most">Contact</a>
+    </div>
+  </div>
+  <div class="central_section">
+    <div class="central_left">
+      <div class="title"> Modern interior</div>
+      <div>
+        A full-Service residential &<br> commercial interior design and<br>staging company offering<br>professional
+        organizing &<br> eco-services.
+      </div>
+      <a>Read more →</a>
+    </div>
+
+    <div class="central_right">
+      <div class="right-container">
+      <img src="photo1.png"></img>
+      <div class="right-corner-note">
+        <div class="design-info">
+          <img class="avatar" src="photo2.png">
+          </img>
+          <div class="designer-detail">
+            <div class="designer-name">Aliza Webber</div>
+            <div class="designer-title">interior designer</div>
+          </div>
+
+        </div>
+        <div class="design-notify">
+          Designed in 2020 by<br> Aliza Webber
+        </div>
+      </div>
+      </div></div>
+    </div>
+  </div>
+</body>
+
+</html>
